@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Flask App{% endblock %}
+{% block body %}
+
+    <div>
+        <div class="top-0 w-full h-12"></div>
+        <div class="flex items-center flex-col bg-gray-300 h-full"> 
+
+            <!-- about dataset -->
+            <div class="w-[60%] mt-4 p-2 flex flex-col rounded-md bg-slate-800 text-[#e0e0e0] py-10 px-20">
+                <h1 class="text-2xl" >About Dataset</h1>
+                <p class="m-1 p1">
+                    > Fraud detection data set is a csv file consisting of various transaction details.
+                </p>
+                <p class="m-1 p1">
+                    > step - maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
+                </p>
+                    > type - CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
+                <p class="m-1 p-1">
+                    > amount - amount of the transaction in local currency.
+                </p>
+                <p class="m-1 p-1">
+                    > nameOrig - customer who started the transaction
+                </p>
+                <p class="m-1 p-1">
+                    > oldbalanceOrg - initial balance before the transaction
+                </p>
+                <p class="m-1 p-1">
+                    > newbalanceOrig - new balance after the transaction
+                </p>
+                <p class="m-1 p-1">
+                    > nameDest - customer who is the recipient of the transaction
+                </p>
+                <p class="m-1 p-1">
+                    > oldbalanceDest - initial balance recipient before the transaction. Note that there is not information for customers that start with M (Merchants).
+                </p>
+                <p class="m-1 p-1">
+                    > newbalanceDest - new balance recipient after the transaction. Note that there is not information for customers that start with M (Merchants).
+                </p>
+                <p class="m-1 p-1">
+                    > isFraud - This is the transactions made by the fraudulent agents inside the simulation. In this specific dataset the fraudulent behavior of the agents aims to profit by taking control or customers accounts and try to empty the funds by transferring to another account and then cashing out of the system.
+                </p>
+                <p class="m-1 p-1">
+                    > isFlaggedFraud - The business model aims to control massive transfers from one account to another and flags illegal attempts. An illegal attempt in this dataset is an attempt to transfer more than 200.000 in a single transaction.
+                </p>
+            </div>
+
+            <!-- parting line -->
+            <div class="w-[60%] h-[2px] my-5 bg-slate-800 rounded-full"></div>
+
+            <!-- about site -->
+            <div class="w-[60%] p-2 mb-4 flex items-left  flex-col rounded-md bg-slate-800 text-[#e0e0e0] px-20 py-10">
+                <h1 class="text-2xl" >About Site</h1>
+                <p class="m-1 p1">This is a website that detects financial fraud using dataset mentioned above.</p> 
+                <p class="m-1 p1">To check whether a thransaction is fraud / not fraud:</p>
+                <ol class="list-inside list-decimal">
+                    <strong>
+                        <li class="ml-10">User has to input only the 'Transaction Id' of a particular transaction, then</li>
+                        <li class="ml-10">Sit back effortlessly</li>
+                    </strong>
+                </ol>
+                <p class="m-1 p1">Rest will be handeled by our Artifical Intelligence Model ..</p>
+                <p class="m-1 p1">Model then prins a Report showing:</p>
+                <ul class="list-inside list-disc">
+                    <li class="ml-10" >Perdiction (Fraud / Not Fraud)</li>
+                    <li class="ml-10" >Balance</li>
+                    <li class="ml-10" >Amount debited</li>
+                    <li class="ml-10" >old balance</li>
+                    <li class="ml-10" >namedestination</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

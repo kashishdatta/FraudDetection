@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+</head>
+<!-- Background -->
+<div
+  class="-z-10 fixed top-0 left-0 h-full w-full bg-[#e0e0e0]"
+></div>
+<!-- Header -->
+<div class="z-10 fixed top-0 w-full h-12 bg-black text-white flex items-center justify-between px-5">
+  <p class="text-white font-semibold text-3xl">Fraud Detection</p>
+  <div class="flex space-x-5">
+    <a href="./">
+      <p class="m-0.5 text-[#e0e0e0] hover:text-white">Home</p>
+    </a>
+    <a href="./about">
+      <p class="m-0.5 text-[#e0e0e0] hover:text-white">About</p> 
+    </a>
+  </div>
+
+</div>
+<body class="flex flex-col h-[100vh] m-0">
+  {% block body %} {% endblock %}
+  <!-- Footer -->
+  <div class="flex items-center justify-between mt-auto p-3 h-auto w-full bg-[#292524] text-white text-md" >
+    &#169; Data Mining Case Study on Fraud Detection using Naive Bayes
+    <!-- social links -->
+    <div class='float-right text-slate-50'>
+      
+      
+      <span class="text-md" >
+        <!-- Prachet -->
+          <!-- linekdin  --> 
+        <a class ="hover:text-sky-400" href="https://www.linkedin.com/in/kashish-datta-b5a6801a8/">
+          <svg class="hover:text-sky-400 inline m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+          <!-- github -->
+        <a href="https://github.com/kashishdatta"> 
+          <svg class="hover:text-fuchsia-600 inline m-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>Kashish Datta |
+        
+        <!-- Akshit -->
+          <!-- linkedin  --> 
+        <a class ="hover:text-sky-400" href="https://www.linkedin.com/in/krish-mehta-227b93219/">
+          <svg class="hover:text-sky-400 inline m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+          <!-- github -->
+        <a href="https://github.com/Krish020902"> 
+          <svg class="hover:text-fuchsia-600 inline m-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>Krish Mehta |
+  
+        <!-- Jay -->
+          <!-- linkedin  --> 
+        <a class ="hover:text-sky-400" href="https://www.linkedin.com/in/rudra-patel-52bb68200/">
+          <svg class="hover:text-sky-400 inline m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+          <!-- github -->
+        <a href="https://github.com"> 
+          <svg class="hover:text-fuchsia-600 inline m-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>Rudra Patel
+      </span>
+      </div>
+  </div>
+</body>
+</html>
